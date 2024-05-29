@@ -1,14 +1,27 @@
 package org.example;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import java.util.List;
+import java.util.Map;
 import java.io.IOException;
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) throws IOException {
         Fetch fetch = new Fetch();
-        String response = fetch.run("https://dog.ceo/api/breeds/image/random");
-        System.out.println(response);
+        String response = fetch.run("https://api.restful-api.dev/objects");
+      //  System.out.println(response);
+
+          JsonConverter converter = new JsonConverter(response);
+
+        try {
+            List<Map<String, Object>> jsonList = converter.convert();
+            Object[] arr = jsonList.toArray();
+            for(int i = 0;i<arr.length;i++){
+               Object item =(Object) arr[i];
+               System.out.println();
+            }
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
 
     }
 }
