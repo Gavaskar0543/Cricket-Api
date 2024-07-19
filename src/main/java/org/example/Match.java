@@ -23,26 +23,32 @@ public class Match {
     }
 
     public String getDateTimeGMT() {
+
         return dateTimeGMT;
     }
 
     public void setDateTimeGMT(String dateTimeGMT) {
+
         this.dateTimeGMT = dateTimeGMT;
     }
 
     public String getMatchType() {
+
         return matchType;
     }
 
     public void setMatchType(String matchType) {
+
         this.matchType = matchType;
     }
 
     public String getStatus() {
+
         return status;
     }
 
     public void setStatus(String status) {
+
         this.status = status;
     }
 

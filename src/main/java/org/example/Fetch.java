@@ -10,11 +10,12 @@ public class Fetch {
     private final OkHttpClient client = new OkHttpClient();
 
     public String run(String url, String apiKey) throws IOException {
+        //request
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("apiKey", apiKey)
                 .build();
-
+        //response
         try (Response response = client.newCall(request).execute()) {
             if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
             return response.body().string();

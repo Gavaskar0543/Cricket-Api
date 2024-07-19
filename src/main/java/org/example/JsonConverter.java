@@ -7,6 +7,7 @@ public class JsonConverter {
     private String jsonString;
     private ObjectMapper objectMapper;
 
+    //constructor
     public JsonConverter(String str) {
         this.jsonString = str;
         this.objectMapper = new ObjectMapper();

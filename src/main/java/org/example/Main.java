@@ -40,7 +40,7 @@ public class Main {
                     count300PlusMatches++;
                 }
             }
-
+            //result
             String result = String.format(
                     "Highest Score: Highest Score and Team Name is: %d by %s\n" +
                             "Number Of Matches with total 300 Plus Score: %d",
